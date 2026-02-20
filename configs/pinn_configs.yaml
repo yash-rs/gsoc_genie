@@ -1,0 +1,41 @@
+# =========================
+# Experiment Settings
+# =========================
+run_name: damped_oscillator_pinn
+seed: 42
+device: auto   # auto | cpu | cuda
+
+# =========================
+# Training Parameters
+# =========================
+optimizer: adam
+epochs: 5000
+batch_size: 1024
+learning_rate: 0.001
+
+# =========================
+# Model Architecture
+# =========================
+
+input_dim: 2
+hidden_dim: 64
+hidden_layers: 4
+activation: tanh
+
+# =========================
+# Sampling Domain
+# =========================
+
+t_min: 0.0
+t_max: 1.0
+xi_min: 0.1
+xi_max: 0.4
+n_collocation: 5000
+n_initial: 1000
+n_test: 5000
+
+
+# =========================
+# Logging
+# =========================
+log_interval: 100
