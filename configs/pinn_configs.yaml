@@ -8,31 +8,46 @@ device: auto   # auto | cpu | cuda
 # =========================
 # Training Parameters
 # =========================
-optimizer: adam
-epochs: 5000
+optimizer:
+  adam:
+    use_adam: True
+    epochs: 100000
+    lr: 0.0001
+
+  lbfgs:
+    use_lbfgs: True
+    lr: 1.0
+    max_iter: 25000
+    history_size: 100
+
+
+resample_period: 10000
 batch_size: 1024
-learning_rate: 0.001
 
 # =========================
 # Model Architecture
 # =========================
-
+network: fcnn # can also use fourier embeddings
 input_dim: 2
-hidden_dim: 64
+hidden_dim: 100
 hidden_layers: 4
 activation: tanh
+# frequencies: 10
+# scale: 5.0
 
 # =========================
-# Sampling Domain
+# ODE
 # =========================
 
 t_min: 0.0
-t_max: 1.0
+t_max: 20.0
 xi_min: 0.1
 xi_max: 0.4
-n_collocation: 5000
+n_collocation: 10000
 n_initial: 1000
 n_test: 5000
+x_0: 0.7 #IC
+v_0: 1.2 #IC
 
 
 # =========================
