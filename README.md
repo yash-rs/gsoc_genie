@@ -53,11 +53,11 @@ The config file `configs/pinn_configs.yaml` controls everything. Key sections:
 - Model:
   - `network`: `fcnn` or `fourier`
   - `input_dim`, `hidden_dim`, `hidden_layers`, `activation`
-  - `frequencies`, `scale` (Fourier embeddings)
+  - `frequencies`, `scale` (for Fourier embeddings)
 - ODE/Sampling:
   - `t_min`, `t_max`
   - `xi_min`, `xi_max`
-  - `n_collocation`, `n_initial`, `n_test`
+  - `n_collocation`, `n_test`
   - `x_0`, `v_0` (initial conditions)
 
 **Model Details**

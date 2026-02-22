@@ -1,7 +1,7 @@
 # =========================
 # Experiment Settings
 # =========================
-run_name: damped_oscillator_pinn
+run_name: damped_oscillator_pinn_fourier
 seed: 42
 device: auto   # auto | cpu | cuda
 
