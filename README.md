@@ -15,7 +15,7 @@ Physics-Informed Neural Network (PINN) for the damped harmonic oscillator. This 
 The target ODE is (in normalized form inside the residual):
 
 $$
-x'' + 2 \xi \x' + x = 0
+x'' + 2 \xi x' + x = 0
 $$
 
 Time is normalized as $t = z / z_{\max}$. The residual uses derivatives with respect to normalized time and rescales by $z_{\max}$ internally.
@@ -62,7 +62,7 @@ The config file `configs/pinn_configs.yaml` controls everything. Key sections:
 
 **Model Details**
 - **Hard ICs**: $x(0) = x_0$ and $x'(0) = v_0$ are enforced by construction:
-  - $x(t) = x_0 + (v_0\dot t_{\max})\, t + t^2\, N(t, \xi)$ (considers time rescaling)
+  - $x(t) = x_0 + (v_0 t_{\max}) t + t^2 N(t, \xi)$ (considers time rescaling)
 - **Residual**: computed via autograd on normalized inputs.
 - **FourierFCNN**: adds sinusoidal features of time and concatenates `xi`.
 
