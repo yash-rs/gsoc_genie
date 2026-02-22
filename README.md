@@ -5,29 +5,29 @@ Physics-Informed Neural Network (PINN) prototype for the damped harmonic oscilla
 **Summary**
 - Problem: damped harmonic oscillator with damping ratio `xi`
 - Model: FCNN PINN with hard-coded initial conditions
-- Inputs: normalized time `t in [0, 1]` and normalized damping `xi_norm in [0, 1]`
-- Outputs: predicted displacement `x(t)`
+- Inputs: normalized time $t \in [0, 1]$ and normalized damping $\xi_{\mathrm{norm}} \in [0, 1]$
+- Outputs: predicted displacement $x(t)$
 - Training: collocation-based residual minimization
 - Inference: compares PINN to analytical and numerical solutions across `xi` values
 
 **Equation**
 The target ODE is (in normalized form inside the residual):
 
-```
-x'' + 2*xi*x' + x = 0
-```
+$$
+x'' + 2\,\xi\,x' + x = 0
+$$
 
-Time is normalized as `t = z / t_max`. The residual uses derivatives with respect to normalized time and rescales by `t_max` internally.
+Time is normalized as $t = z / t_{\max}$. The residual uses derivatives with respect to normalized time and rescales by $t_{\max}$ internally.
 
 **Project Layout**
 - `harmonic_pinn.py` — training and inference pipeline
 - `network.py` — FCNN and Fourier-embedding FCNN architectures
 - `configs/pinn_configs.yaml` — default experiment configuration
 - `damped_oscillator.ipynb` — quick-start notebook
-- `outputs/` — run artifacts (logs, plots, inference results)
+- `outputs/` — run logs, plots, inference results
 
 **Requirements**
-- Python 3.12+
+- Python 3.12
 - `numpy`, `matplotlib`, `scipy`, `torch`, `pyyaml`
 
 **Quick Start (Notebook)**
@@ -60,8 +60,8 @@ The config file `configs/pinn_configs.yaml` controls everything. Key sections:
   - `x_0`, `v_0` (initial conditions)
 
 **Model Details**
-- **Hard ICs**: `x(0) = x_0` and `x'(0) = v_0` are enforced by construction:
-  - `x(t) = x_0 + (v_0 * t_max) * t + t^2 * N(t, xi)`
+- **Hard ICs**: $x(0) = x_0$ and $x'(0) = v_0$ are enforced by construction:
+  - $x(t) = x_0 + (v_0\, t_{\max})\, t + t^2\, N(t, \xi)$
 - **Residual**: computed via autograd on normalized inputs.
 - **FourierFCNN**: adds sinusoidal features of time and concatenates `xi`.
 
@@ -74,7 +74,7 @@ The config file `configs/pinn_configs.yaml` controls everything. Key sections:
 - Loss history is stored and plotted.
 
 **Inference**
-For a small grid of `xi` values, inference computes:
+For a small grid of `xi` values, inference function computes:
 - Analytical solution
 - Numerical solution (via `scipy.integrate.solve_ivp`)
 - PINN predictions
@@ -90,5 +90,4 @@ outputs/<run_name>_<YYYYMMDD_HHMMSS>/
   inference_results/
     inference_xi_*.png
 ```
-
 
