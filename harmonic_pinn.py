@@ -1,12 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
-import sklearn
 import torch
 import logging
 
 import time
-import os
 import sys
 from pathlib import Path
 from network import FCNN, FourierFCNN
@@ -23,7 +21,6 @@ class HarmonicPINN:
 
         ## sampling configs ##
         self.num_collocation = self.config.get('n_collocation', 5000)
-        self.num_initial = self.config.get('n_initial', 1000)
         self.num_test = self.config.get('n_test', 1000)
 
         self.t_min = self.config.get('t_min', 0.)
@@ -31,6 +28,7 @@ class HarmonicPINN:
         self.xi_min = self.config.get('xi_min', 0.1)
         self.xi_max = self.config.get('xi_max', 0.4)
 
+        ## ICs ##
         self.x_0 = self.config.get('x_0', 0.7)
         self.v_0 = self.config.get('v_0', 1.2)
 
@@ -46,9 +44,9 @@ class HarmonicPINN:
 
         ## optimizer and training ##
         self.optim = self.config.get('optimizer', {})
-        self.lr = self.config.get('learning_rate', 1e-3)
-        self.epochs = self.config.get('epochs', 20000)
-        self.batch_size = self.config.get('batch_size', 1024)
+        #self.lr = self.config.get('learning_rate', 1e-3)
+        #self.epochs = self.config.get('epochs', 20000)
+        self.batch_size = self.config.get('batch_size', 1024) # not implemented currently
         self.resample_period = self.config.get('resample_period', 1000)
 
         ## device ##
@@ -115,7 +113,7 @@ class HarmonicPINN:
             self.network.to(self.device)
         elif self.net_type == "fourier":
             self.network = FourierFCNN(self.hidden_dim, self.hidden_layers, self.x_0, self.v_0, self.t_max, self.num_frequencies, self.fourier_scale, self.activation)
-            self.netwrok.to(self.device)
+            self.network.to(self.device)
 
         ## Setup optimizers ##
 
@@ -151,8 +149,6 @@ class HarmonicPINN:
         self.loss_history = []
         self.epoch = []
         epoch = 0
-        x_0 = self.x_0
-        v_0 = self.v_0
         t_max = self.t_max
         xi_min = self.xi_min
         xi_max = self.xi_max

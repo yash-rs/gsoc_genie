@@ -50,7 +50,7 @@ class FCNN(nn.Module):
 
     def _initialize_weights(self):
         """
-        Xavier initialization (important for PINNs).
+        Xavier (Glorot Normal) initialization
         """
         for m in self.modules():
             if isinstance(m, nn.Linear):
@@ -69,7 +69,8 @@ class FourierFCNN(nn.Module):
                  activation="tanh"):
         super().__init__()
 
-        self.B = torch.randn(num_frequencies) * scale #fourier frequencies
+        B = torch.randn(num_frequencies) * scale #fourier frequencies
+        self.register_buffer("B", B)
         self.input_dim = 2 * (num_frequencies) + 1
         self.x_0 = x0
         self.v_0 = v0
@@ -116,7 +117,7 @@ class FourierFCNN(nn.Module):
     
     def _initialize_weights(self):
         """
-        Xavier initialization (important for PINNs).
+        Xavier initialization
         """
         for m in self.modules():
             if isinstance(m, nn.Linear):

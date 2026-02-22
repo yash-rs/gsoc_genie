@@ -27,13 +27,13 @@ batch_size: 1024
 # =========================
 # Model Architecture
 # =========================
-network: fcnn # can also use fourier embeddings
+network: fourier # can also use fourier embeddings
 input_dim: 2
 hidden_dim: 100
 hidden_layers: 4
 activation: tanh
-# frequencies: 10
-# scale: 5.0
+frequencies: 10
+scale: 5.0
 
 # =========================
 # ODE
@@ -44,7 +44,6 @@ t_max: 20.0
 xi_min: 0.1
 xi_max: 0.4
 n_collocation: 10000
-n_initial: 1000
 n_test: 5000
 x_0: 0.7 #IC
 v_0: 1.2 #IC
