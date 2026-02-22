@@ -1,0 +1,125 @@
+01:31:10 | INFO | Logging initialized. Log file: outputs\damped_oscillator_pinn_20260222_013110\train.log
+01:31:10 | INFO | Initializing Trainer...
+01:31:10 | INFO | Configs: {'run_name': 'damped_oscillator_pinn', 'seed': 42, 'device': 'auto', 'optimizer': {'adam': {'use_adam': True, 'epochs': 100000, 'lr': 0.0001}, 'lbfgs': {'use_lbfgs': True, 'lr': 1.0, 'max_iter': 25000, 'history_size': 100}}, 'resample_period': 10000, 'batch_size': 1024, 'network': 'fourier', 'input_dim': 2, 'hidden_dim': 100, 'hidden_layers': 4, 'activation': 'tanh', 'frequencies': 10, 'scale': 5.0, 't_min': 0.0, 't_max': 20.0, 'xi_min': 0.1, 'xi_max': 0.4, 'n_collocation': 10000, 'n_initial': 1000, 'n_test': 5000, 'x_0': 0.7, 'v_0': 1.2, 'log_interval': 100}
+01:31:12 | INFO | Starting Adam training
+01:31:13 | INFO | [Adam] Epoch 0 | Loss: 2.217000e+02
+01:31:34 | INFO | [Adam] Epoch 1000 | Loss: 3.211784e+01
+01:31:56 | INFO | [Adam] Epoch 2000 | Loss: 1.716390e+01
+01:32:17 | INFO | [Adam] Epoch 3000 | Loss: 1.266316e+01
+01:32:40 | INFO | [Adam] Epoch 4000 | Loss: 8.227757e+00
+01:33:04 | INFO | [Adam] Epoch 5000 | Loss: 5.864132e+00
+01:33:27 | INFO | [Adam] Epoch 6000 | Loss: 4.358019e+00
+01:33:50 | INFO | [Adam] Epoch 7000 | Loss: 3.310172e+00
+01:34:12 | INFO | [Adam] Epoch 8000 | Loss: 2.547811e+00
+01:34:33 | INFO | [Adam] Epoch 9000 | Loss: 1.980203e+00
+01:34:55 | INFO | [Adam] Epoch 10000 | Loss: 1.572241e+00
+01:35:17 | INFO | [Adam] Epoch 11000 | Loss: 1.235245e+00
+01:35:40 | INFO | [Adam] Epoch 12000 | Loss: 9.765200e-01
+01:36:04 | INFO | [Adam] Epoch 13000 | Loss: 7.770702e-01
+01:36:27 | INFO | [Adam] Epoch 14000 | Loss: 6.195125e-01
+01:36:49 | INFO | [Adam] Epoch 15000 | Loss: 4.978229e-01
+01:37:10 | INFO | [Adam] Epoch 16000 | Loss: 4.033078e-01
+01:37:32 | INFO | [Adam] Epoch 17000 | Loss: 3.292519e-01
+01:37:53 | INFO | [Adam] Epoch 18000 | Loss: 2.717614e-01
+01:38:14 | INFO | [Adam] Epoch 19000 | Loss: 2.314239e-01
+01:38:35 | INFO | [Adam] Epoch 20000 | Loss: 1.918594e-01
+01:38:56 | INFO | [Adam] Epoch 21000 | Loss: 1.670424e-01
+01:39:16 | INFO | [Adam] Epoch 22000 | Loss: 1.465962e-01
+01:39:36 | INFO | [Adam] Epoch 23000 | Loss: 1.300024e-01
+01:39:58 | INFO | [Adam] Epoch 24000 | Loss: 1.165504e-01
+01:40:31 | INFO | [Adam] Epoch 25000 | Loss: 1.050790e-01
+01:41:03 | INFO | [Adam] Epoch 26000 | Loss: 9.615907e-02
+01:41:38 | INFO | [Adam] Epoch 27000 | Loss: 8.936165e-02
+01:42:03 | INFO | [Adam] Epoch 28000 | Loss: 8.035097e-02
+01:42:30 | INFO | [Adam] Epoch 29000 | Loss: 7.439426e-02
+01:42:52 | INFO | [Adam] Epoch 30000 | Loss: 7.092844e-02
+01:43:21 | INFO | [Adam] Epoch 31000 | Loss: 6.382107e-02
+01:43:50 | INFO | [Adam] Epoch 32000 | Loss: 5.913368e-02
+01:44:19 | INFO | [Adam] Epoch 33000 | Loss: 5.503969e-02
+01:44:49 | INFO | [Adam] Epoch 34000 | Loss: 5.165230e-02
+01:45:11 | INFO | [Adam] Epoch 35000 | Loss: 4.805702e-02
+01:45:40 | INFO | [Adam] Epoch 36000 | Loss: 4.509823e-02
+01:46:12 | INFO | [Adam] Epoch 37000 | Loss: 4.245616e-02
+01:46:40 | INFO | [Adam] Epoch 38000 | Loss: 4.000186e-02
+01:47:12 | INFO | [Adam] Epoch 39000 | Loss: 3.775276e-02
+01:47:46 | INFO | [Adam] Epoch 40000 | Loss: 3.883367e-02
+01:48:20 | INFO | [Adam] Epoch 41000 | Loss: 3.362015e-02
+01:48:52 | INFO | [Adam] Epoch 42000 | Loss: 3.185077e-02
+01:49:23 | INFO | [Adam] Epoch 43000 | Loss: 3.036362e-02
+01:49:46 | INFO | [Adam] Epoch 44000 | Loss: 2.864759e-02
+01:50:07 | INFO | [Adam] Epoch 45000 | Loss: 2.726035e-02
+01:50:36 | INFO | [Adam] Epoch 46000 | Loss: 2.727609e-02
+01:51:06 | INFO | [Adam] Epoch 47000 | Loss: 2.486178e-02
+01:51:34 | INFO | [Adam] Epoch 48000 | Loss: 2.364659e-02
+01:51:58 | INFO | [Adam] Epoch 49000 | Loss: 2.268653e-02
+01:52:23 | INFO | [Adam] Epoch 50000 | Loss: 2.419415e-02
+01:52:48 | INFO | [Adam] Epoch 51000 | Loss: 2.150022e-02
+01:53:16 | INFO | [Adam] Epoch 52000 | Loss: 2.143040e-02
+01:53:44 | INFO | [Adam] Epoch 53000 | Loss: 1.968440e-02
+01:54:17 | INFO | [Adam] Epoch 54000 | Loss: 1.869764e-02
+01:54:49 | INFO | [Adam] Epoch 55000 | Loss: 1.783956e-02
+01:55:19 | INFO | [Adam] Epoch 56000 | Loss: 1.742912e-02
+01:55:50 | INFO | [Adam] Epoch 57000 | Loss: 1.623923e-02
+01:56:21 | INFO | [Adam] Epoch 58000 | Loss: 1.555254e-02
+01:56:55 | INFO | [Adam] Epoch 59000 | Loss: 1.486163e-02
+01:57:31 | INFO | [Adam] Epoch 60000 | Loss: 3.675681e-02
+01:58:05 | INFO | [Adam] Epoch 61000 | Loss: 1.514450e-02
+01:58:36 | INFO | [Adam] Epoch 62000 | Loss: 1.439558e-02
+01:59:06 | INFO | [Adam] Epoch 63000 | Loss: 1.379509e-02
+01:59:37 | INFO | [Adam] Epoch 64000 | Loss: 1.325625e-02
+02:00:07 | INFO | [Adam] Epoch 65000 | Loss: 1.261974e-02
+02:00:37 | INFO | [Adam] Epoch 66000 | Loss: 1.236092e-02
+02:00:57 | INFO | [Adam] Epoch 67000 | Loss: 1.166991e-02
+02:01:09 | INFO | [Adam] Epoch 68000 | Loss: 1.126422e-02
+02:01:21 | INFO | [Adam] Epoch 69000 | Loss: 1.082770e-02
+02:01:33 | INFO | [Adam] Epoch 70000 | Loss: 1.280642e-02
+02:01:44 | INFO | [Adam] Epoch 71000 | Loss: 1.133813e-02
+02:01:55 | INFO | [Adam] Epoch 72000 | Loss: 1.069495e-02
+02:02:05 | INFO | [Adam] Epoch 73000 | Loss: 9.720335e-03
+02:02:15 | INFO | [Adam] Epoch 74000 | Loss: 9.323413e-03
+02:02:26 | INFO | [Adam] Epoch 75000 | Loss: 9.198414e-03
+02:02:37 | INFO | [Adam] Epoch 76000 | Loss: 8.578295e-03
+02:02:47 | INFO | [Adam] Epoch 77000 | Loss: 9.952259e-03
+02:02:58 | INFO | [Adam] Epoch 78000 | Loss: 8.845697e-03
+02:03:09 | INFO | [Adam] Epoch 79000 | Loss: 8.480854e-03
+02:03:19 | INFO | [Adam] Epoch 80000 | Loss: 8.902404e-03
+02:03:31 | INFO | [Adam] Epoch 81000 | Loss: 7.558804e-03
+02:03:42 | INFO | [Adam] Epoch 82000 | Loss: 7.242870e-03
+02:03:54 | INFO | [Adam] Epoch 83000 | Loss: 6.936670e-03
+02:04:09 | INFO | [Adam] Epoch 84000 | Loss: 6.592128e-03
+02:04:23 | INFO | [Adam] Epoch 85000 | Loss: 6.509953e-03
+02:04:37 | INFO | [Adam] Epoch 86000 | Loss: 6.015609e-03
+02:04:51 | INFO | [Adam] Epoch 87000 | Loss: 5.716085e-03
+02:05:06 | INFO | [Adam] Epoch 88000 | Loss: 5.453756e-03
+02:05:20 | INFO | [Adam] Epoch 89000 | Loss: 5.197115e-03
+02:05:34 | INFO | [Adam] Epoch 90000 | Loss: 8.601338e-03
+02:05:49 | INFO | [Adam] Epoch 91000 | Loss: 5.501383e-03
+02:06:03 | INFO | [Adam] Epoch 92000 | Loss: 5.252663e-03
+02:06:18 | INFO | [Adam] Epoch 93000 | Loss: 5.053521e-03
+02:06:34 | INFO | [Adam] Epoch 94000 | Loss: 4.819417e-03
+02:06:49 | INFO | [Adam] Epoch 95000 | Loss: 4.655526e-03
+02:07:04 | INFO | [Adam] Epoch 96000 | Loss: 4.529552e-03
+02:07:15 | INFO | [Adam] Epoch 97000 | Loss: 4.310539e-03
+02:07:27 | INFO | [Adam] Epoch 98000 | Loss: 4.012975e-03
+02:07:39 | INFO | [Adam] Epoch 99000 | Loss: 3.767402e-03
+02:07:51 | INFO | Starting LBFGS refinement
+02:07:51 | INFO | [LBFGS] Step 0 | Loss: 1.140458e-02
+02:08:25 | INFO | [LBFGS] Step 1000 | Loss: 1.022389e-03
+02:08:54 | INFO | [LBFGS] Step 2000 | Loss: 7.366551e-04
+02:09:24 | INFO | [LBFGS] Step 3000 | Loss: 6.899550e-04
+02:09:59 | INFO | [LBFGS] Step 4000 | Loss: 6.196325e-04
+02:10:29 | INFO | [LBFGS] Step 5000 | Loss: 5.307900e-04
+02:10:58 | INFO | [LBFGS] Step 6000 | Loss: 4.480000e-04
+02:11:28 | INFO | [LBFGS] Step 7000 | Loss: 4.009919e-04
+02:11:57 | INFO | [LBFGS] Step 8000 | Loss: 3.636026e-04
+02:12:29 | INFO | [LBFGS] Step 9000 | Loss: 2.981222e-04
+02:13:00 | INFO | [LBFGS] Step 10000 | Loss: 2.626406e-04
+02:13:28 | INFO | [LBFGS] Step 11000 | Loss: 2.236831e-04
+02:13:35 | INFO | [LBFGS] Final Loss: 2.175387e-04
+02:13:35 | INFO | Training complete.
+02:13:36 | INFO | Loss curve saved to outputs\damped_oscillator_pinn_20260222_013110\train_loss.png
+02:13:36 | INFO | Inference saved for xi=0.10 | L2 error=3.7743e-02
+02:13:36 | INFO | Inference saved for xi=0.18 | L2 error=6.4768e-03
+02:13:36 | INFO | Inference saved for xi=0.25 | L2 error=1.2762e-02
+02:13:37 | INFO | Inference saved for xi=0.33 | L2 error=2.6847e-02
+02:13:37 | INFO | Inference saved for xi=0.40 | L2 error=3.8217e-02
